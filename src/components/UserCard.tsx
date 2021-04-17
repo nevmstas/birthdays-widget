@@ -23,7 +23,7 @@ const useStyles = makeStyles(() =>
 export const UserCard: React.FC<UserCardProps> = ({ user }) => {
   const classes = useStyles();
   return (
-    <Box display="flex" m="30px" alignItems="center">
+    <Box display="flex" m='5px' alignItems="center" width='300px'>
       <img
         src={DEV_ENDPOINT + user.avatarUrl}
         alt="avatar pic"

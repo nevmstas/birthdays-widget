@@ -1,3 +1,5 @@
+import { User } from "../redux/birthdaysReducer";
+
 export const getDataDto = (data: Date) => {
   console.log(data)
   return `${
@@ -24,5 +26,16 @@ const months = [
 
 export const getParseDate = (datestr: string) => {
   const date = new Date(datestr);
-  return `${date.getDay() + 1} ${months[date.getMonth()]}`
+  console.log(date)
+  return `${date.getDate()} ${months[date.getMonth()]}`
 };
+
+export const sortByNameFunc = (a: User, b: User) =>{
+  if (a.name > b.name) {
+    return 1;
+  }
+  if (a.name < b.name) {
+    return -1;
+  }
+  return 0;
+}
